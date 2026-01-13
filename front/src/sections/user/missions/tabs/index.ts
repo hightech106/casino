@@ -1,0 +1,9 @@
+export { default as HomeTab } from './HomeTab';
+export { default as MissionsTab } from './MissionsTab';
+export { default as LevelsTab } from './LevelsTab';
+export { default as BadgesTab } from './BadgesTab';
+export { default as MiniGamesTab } from './MiniGamesTab';
+export { default as BonusesTab } from './BonusesTab';
+export { default as RulesTab } from './RulesTab';
+export { default as MailboxTab } from './MailboxTab';
+export { default as ShopTab } from './ShopTab';

@@ -1,0 +1,35 @@
+import { memo } from 'react';
+// @mui
+import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import type { BoxProps } from '@mui/material/Box';
+
+// ----------------------------------------------------------------------
+
+function MultiIcon({ ...other }: BoxProps) {
+  const theme = useTheme();
+
+  const PRIMARY_MAIN = theme.palette.primary.main;
+
+  const PRIMARY_DARK = theme.palette.primary.dark;
+
+  const PRIMARY_DARKER = theme.palette.primary.darker;
+
+  return (
+    <Box
+      component="svg"
+      width="20"
+      height="20"
+      viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
+      {...other}
+    >
+      <path
+        d="M22.853 4.573l-4.573-4.573c-0.582 0.586-1.389 0.949-2.28 0.949s-1.698-0.363-2.28-0.949l-0-0-13.72 13.72c0.586 0.582 0.949 1.389 0.949 2.28s-0.363 1.698-0.949 2.28l-0 0 4.573 4.573c0.569-0.504 1.321-0.812 2.145-0.812 1.789 0 3.24 1.451 3.24 3.24 0 0.824-0.308 1.577-0.815 2.149l0.003-0.003 4.573 4.573c0.582-0.586 1.389-0.949 2.28-0.949s1.698 0.363 2.28 0.949l0 0 13.72-13.72c-0.586-0.582-0.949-1.389-0.949-2.28s0.363-1.698 0.949-2.28l0-0-4.573-4.573c-0.569 0.504-1.321 0.812-2.145 0.812-1.789 0-3.24-1.451-3.24-3.24 0-0.824 0.308-1.577 0.815-2.149l-0.003 0.003zM14 20.28l-1.72 1.72-2.28-2.28 1.72-1.72zM18 16.28l-1.72 1.72-2.28-2.28 1.72-1.72zM22 12.28l-1.72 1.72-2.28-2.28 1.72-1.72z"
+        fill={PRIMARY_MAIN}
+      />
+    </Box>
+  );
+}
+
+export default memo(MultiIcon);

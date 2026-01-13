@@ -33,14 +33,6 @@ if (error) {
 }
 
 const games = {
-    exampleGame: {
-        minBetAmount: 1, // Min bet amount (in coins)
-        maxBetAmount: 100000, // Max bet amount (in coins)
-        feePercentage: 0.1 // House fee percentage
-    },
-    race: {
-        prizeDistribution: [40, 20, 14.5, 7, 5.5, 4.5, 3.5, 2.5, 1.5, 1] // How is the prize distributed (place = index + 1)
-    },
     vip: {
         levels: [
             {
@@ -72,35 +64,6 @@ const games = {
     },
     affiliates: {
         earningPercentage: 20 // How many percentage of house edge the affiliator will get
-    },
-    cups: {
-        minBetAmount: 0.1, // Min bet amount (in coins)
-        maxBetAmount: 100000, // Max bet amount (in coins)
-        feePercentage: 0.05 // House fee percentage
-    },
-    king: {
-        minBetAmount: 0.1, // Min bet amount (in coins)
-        maxBetAmount: 100000, // Max bet amount (in coins)
-        feePercentage: 0.05, // House fee percentage
-        autoChooseTimeout: 30000 // Auto-choser timeout in ms
-    },
-    shuffle: {
-        minBetAmount: 0.1, // Min bet amount (in coins)
-        maxBetAmount: 100000, // Max bet amount (in coins)
-        feePercentage: 0.05, // House fee percentage
-        waitingTime: 30000
-    },
-    roulette: {
-        minBetAmount: 0.1, // Min bet amount (in coins)
-        maxBetAmount: 200, // Max bet amount (in coins)
-        feePercentage: 0.02, // House fee percentage
-        waitingTime: 30000 // Roulette waiting time in ms
-    },
-    crash: {
-        minBetAmount: 0.01, // Min bet amount (in coins)
-        maxBetAmount: 200, // Max bet amount (in coins)
-        maxProfit: 1000, // Max profit on crash, forces auto cashout To do *** here max profit logic. should be done before shared. so that means before start the value need to be managed. only money is small then go to high value or cut high value. High value goes when no user is alive.
-        houseEdge: 0.04 // House edge percentage
     }
 };
 

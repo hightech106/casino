@@ -23,11 +23,6 @@ import socketServer from './socket';
 import { swaggerUi, swaggerSpec } from './swagger';
 
 import { errorConverter, errorHandler } from './middlewares/error';
-import { crashSocket } from './controllers/crash.controller';
-import { coinflipSocket } from './controllers/coinflip.controller';
-import { slideSocket } from './controllers/slide.controller';
-import { baccaratSocket } from './controllers/baccarat_m.controller';
-import { hiloMSocket } from './controllers/hilo_m.controller';
 import { initCron } from './services/base/cron.service';
 
 const frontend = process.env.FRONTEND as string;
@@ -65,11 +60,6 @@ const io = new socket.Server(server, { cors: { origin: '*' } });
 
 global.io = io;
 socketServer(io);
-crashSocket(io);
-coinflipSocket(io);
-slideSocket(io);
-baccaratSocket(io);
-hiloMSocket(io);
 
 initCron();
 

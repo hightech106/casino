@@ -8,26 +8,7 @@ import fs from 'fs-extra';
 import { GameRTPModel, GameGGRModel } from '../../models/index';
 
 const GAME_LIST = [
-    "baccarat_m",
-    "baccarat_s",
-    "blackjack",
-    "coinflip",
-    "crash",
-    "dice",
-    "diamonds",
-    "hilo_m",
-    "hilo",
-    "limbo",
-    "mine",
-    "keno",
-    "slide",
-    "roulette",
-    "videopoker",
-    "flowerpoker",
-    "goal",
-    "plinko",
-    "roulette",
-    "wheel",
+    "keno"
 ]
 
 

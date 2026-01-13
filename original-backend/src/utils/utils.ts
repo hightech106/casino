@@ -1,7 +1,7 @@
 /**
  * General utility functions for geometric calculations and request processing.
  * Provides point-in-polygon detection and IP address extraction from HTTP requests.
- * Used for game logic (e.g., Plinko) and security/analytics purposes.
+ * Used for game logic and security/analytics purposes.
  */
 export const isPointInsidePolygon = (point, polygon) => {
     const x = Number(point[0]),

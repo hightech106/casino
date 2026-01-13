@@ -34,19 +34,9 @@ const MOBILEMENU = [
         icon: ICONS.home
     },
     {
-        url: paths.crash.root,
-        label: "Crash",
-        icon: ICONS.crash
-    },
-    {
-        url: paths.coinflip.root,
-        label: "Coinflip",
-        icon: ICONS.coinflip
-    },
-    {
-        url: paths.plinko.root,
-        label: "Plinko",
-        icon: ICONS.plinko
+        url: paths.keno.root,
+        label: "Keno",
+        icon: ICONS.keno
     },
     {
         url: paths.user.history,

@@ -1,0 +1,60 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+>
+  <!-- Poker chip background -->
+  <circle cx="256" cy="256" r="220" fill="#c52b26" />
+  <!-- Outer golden edge -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#f4c55a" stroke-width="26" />
+  <!-- Inner dark ring -->
+  <circle cx="256" cy="256" r="155" fill="none" stroke="#2b1010" stroke-width="22" />
+  <!-- Center disk -->
+  <circle cx="256" cy="256" r="120" fill="#c52b26" />
+
+  <!-- Chip segments (gold blocks) -->
+  <rect x="240" y="28"  width="32" height="56" rx="6" ry="6" fill="#f4c55a" />
+  <rect x="240" y="428" width="32" height="56" rx="6" ry="6" fill="#f4c55a" />
+  <rect x="28"  y="240" width="56" height="32" rx="6" ry="6" fill="#f4c55a" />
+  <rect x="428" y="240" width="56" height="32" rx="6" ry="6" fill="#f4c55a" />
+
+  <rect x="105" y="84"  width="40" height="28" rx="6" ry="6"
+        transform="rotate(-45 125 98)" fill="#f4c55a" />
+  <rect x="367" y="84"  width="40" height="28" rx="6" ry="6"
+        transform="rotate(45 387 98)" fill="#f4c55a" />
+  <rect x="105" y="400" width="40" height="28" rx="6" ry="6"
+        transform="rotate(45 125 414)" fill="#f4c55a" />
+  <rect x="367" y="400" width="40" height="28" rx="6" ry="6"
+        transform="rotate(-45 387 414)" fill="#f4c55a" />
+
+  <!-- Spade symbol -->
+  <!-- Top spade shape -->
+  <path
+    d="M256 126
+       C 214 162 196 196 196 224
+       C 196 253 216 276 244 284
+       C 229 284 212 292 202 304
+       C 192 317 188 333 188 344
+       C 204 334 222 330 236 330
+       C 246 330 252 332 256 334
+       C 260 332 266 330 276 330
+       C 290 330 308 334 324 344
+       C 324 333 320 317 310 304
+       C 300 292 283 284 268 284
+       C 296 276 316 253 316 224
+       C 316 196 298 162 256 126 Z"
+    fill="#f4c55a"
+  />
+  <!-- Spade stem -->
+  <path
+    d="M232 332
+       L 216 372
+       C 214 377 218 384 224 384
+       H 288
+       C 294 384 298 377 296 372
+       L 280 332
+       Z"
+    fill="#f4c55a"
+  />
+
+</svg>

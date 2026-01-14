@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Game Widget</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 8px;
+        background-color: #142214 !important;
+      }
+
+      table td {
+        background-color: #142214 !important;
+        color: white;
+        border-color: #142214 !important;
+
+        /* br {
+          display: none;
+        } */
+      }
+
+      .wg_active {
+        border-radius: 10px;
+      }
+
+      .wg_header,
+      .wg_liveTime {
+        color: white !important;
+      }
+
+      .wb_img_block {
+        background-color: transparent !important;
+      }
+
+      #wg-api-football-game {
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      ::-webkit-scrollbar {
+        height: 5px;
+        width: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #101024;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 8px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #150529;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="wg-api-football-game"
+      data-host="v3.football.api-sports.io"
+      data-key="67cad7b5e245a9cda8f7b517abcfa5da"
+      data-theme=""
+      data-refresh="15"
+      data-show-errors="false"
+      data-show-logos="true"
+    ></div>
+
+    <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js"></script>
+
+    <script>
+      const dataId = getQueryParam('data-id');
+      // Function to get query parameters
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Set the data-id from the URL parameter
+
+      if (dataId) {
+        const widgetDiv = document.getElementById('wg-api-football-game');
+        widgetDiv.setAttribute('data-id', dataId);
+      }
+
+      function checkClass(element) {
+        const classList = element?.classList || '';
+        const classArray = Array.from(classList);
+        return classArray.includes('wg_active');
+      }
+
+      let height = 1;
+      const widgetDiv = document.getElementById('wg-api-football-game');
+
+      function checkHeight() {
+        setInterval(() => {
+          const eventEle = document.getElementById(`football-game-div-events-button-${dataId}`);
+          const statisticsEle = document.getElementById(
+            `football-game-div-statistics-button-${dataId}`
+          );
+          const event = checkClass(eventEle);
+          const statistics = checkClass(statisticsEle);
+
+          const selected = (event && 'event') || (statistics && 'statistics') || '-';
+
+          console.log(selected !== '-' ? selected : 'Not selected');
+
+          const currentH = widgetDiv.offsetHeight;
+          if (currentH !== height) {
+            height = currentH > 1500 ? 400 : currentH;
+            window.parent.postMessage({ height, selected }, '*');
+          }
+        }, 1000);
+      }
+
+      checkHeight();
+    </script>
+  </body>
+</html>

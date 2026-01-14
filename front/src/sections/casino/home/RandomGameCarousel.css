@@ -1,0 +1,49 @@
+.random-game-swiper {
+  position: relative;
+  overflow: visible;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.random-game-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+}
+
+@media (min-width: 0px) {
+  .random-game-swiper {
+    padding: 2px !important;
+  }
+}
+
+@media (min-width: 360px) {
+  .random-game-swiper {
+    padding: 2px !important;
+  }
+}
+
+@media (min-width: 600px) {
+  .random-game-swiper {
+    padding: 0 2px !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .random-game-swiper {
+    padding: 0 2px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .random-game-swiper {
+    padding: 0 2px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .random-game-swiper {
+    padding: 0 2px !important;
+  }
+}

@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 400;
+  font-style: normal;
+  src: local('CircularStd'), url('CircularStd-Book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 500;
+  font-style: normal;
+  src: local('CircularStd'), url('CircularStd-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 700;
+  font-style: normal;
+  src: local('CircularStd'), url('CircularStd-Bold.otf') format('opentype');
+}
+
+ 
+@font-face {  
+  font-family: 'Impact';
+  src: url('./impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {  
+  font-family: 'Impact';
+  src: url('./impact.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {  
+  font-family: 'Impact';
+  src: url('./impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {  
+  font-family: 'Impact';
+  src: url('./impact.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}  
+
+@font-face {
+  font-family: 'FONTSPRING DEMO - Blunt Con It';
+  src: url('./BluntConItItalic.woff2') format('woff2'),
+       url('./BluntConItItalic.woff') format('woff'),
+       url('./BluntConItItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geogrotesque Cyr';
+  src: url('./GeogrotesqueCyr-Regular.woff2') format('woff2'),
+       url('./GeogrotesqueCyr-Regular.woff') format('woff'),
+       url('./GeogrotesqueCyr-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geogrotesque Cyr';
+  src: url('./GeogrotesqueCyr-Medium.woff2') format('woff2'),
+       url('./GeogrotesqueCyr-Medium.woff') format('woff'),
+       url('./GeogrotesqueCyr-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geogrotesque Cyr';
+  src: url('./GeogrotesqueCyr-BoldItalic.woff2') format('woff2'),
+       url('./GeogrotesqueCyr-BoldItalic.woff') format('woff'),
+       url('./GeogrotesqueCyr-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Specific styles for bonus card images to override global styles */
+.bonus-card-container .bonus-card-image img,
+.bonus-card-image img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+}

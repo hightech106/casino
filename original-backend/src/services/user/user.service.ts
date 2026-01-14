@@ -41,7 +41,7 @@ const getUserHistory = async (userId: string) => {
 };
 
 const updateUserByUserId = async (userId: string, data: IUser) => {
-    return await UserModel.findOneAndUpdate({ userId }, data, { new: true });
+    return await UserModel.findOneAndUpdate({ userId }, data, { upsert: true, new: true });
 };
 
 const handleBalance = async (

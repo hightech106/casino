@@ -1,0 +1,29 @@
+/**
+ * Standalone microservice for processing ended sports matches (instance 3).
+ * Runs on PORT+3, continuously processes completed matches and finalizes results.
+ * One of multiple instances for load distribution across match finalization.
+ */
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("dotenv/config");
+require("regenerator-runtime");
+const mongoose_1 = require("mongoose");
+const http_1 = require("http");
+const sportsrealtime_1 = require("./controllers/sports/sportsrealtime");
+try {
+    const port = Number(process.env.PORT) + 3;
+    mongoose_1.default.connect(process.env.DATABASE).then(() => {
+        const server = (0, http_1.createServer)((req, res) => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'text/plain');
+            res.end('Ends3');
+        });
+        server.listen(port, '127.0.0.1', () => {
+            console.log('server listening on:', port);
+            (0, sportsrealtime_1.Ends3)();
+        });
+    });
+}
+catch (error) {
+    console.log(`Ends3`, error);
+}
